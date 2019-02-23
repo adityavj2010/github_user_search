@@ -4,6 +4,10 @@
 
 export const environment = {
   production: false,
+  //Enter GITHUB_USERNAME
+  GITHUB_USERNAME:"",
+  //Enter GITHUB_PASSWORD
+  GITHUB_PASSWORD:""
 };
 
 
