@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    padding: 0%;
+}
+
+app-user-list,app-search-bar {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+app-search-bar {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+    background-color: #2d72d9;
+    display: flex;
+}
+app-user-list {
+    padding-top: 10px;
+    display:block;
+}

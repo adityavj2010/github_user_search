@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+body {
+    background-color:#eceef1 !important;
+    font-family: 'Lato', sans-serif !important;
+}

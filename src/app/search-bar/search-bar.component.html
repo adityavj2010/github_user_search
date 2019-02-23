@@ -1,0 +1,9 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span><select (change)="change_order_by()" [(ngModel)]="selected_option" class="form-control">
+        <option class="form-control" *ngFor="let item of select_options" value={{item.value}}>{{item.string}}</option>
+      </select></span>
+    <span class="fill_space"></span>
+    <span><input [(ngModel)]="username" (keypress)="search_on_github($event)" class="form-control" placeholder="Username"></span>
+  </mat-toolbar-row>
+</mat-toolbar>

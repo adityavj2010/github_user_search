@@ -1,0 +1,15 @@
+<div class='user_card'>
+    <div style="display:flex;"><div align="middle" style="width:132px;"><img class="img-circle" width="100px" height="100px" src="{{item.avatar_url}}"></div>
+    <div class="user_info" ><div class="username">{{item.login}}</div>
+    <div class="profile_url">Profile URL : {{item.html_url}}</div>
+    <div class="user_score">Score : {{item.score}}</div>    
+    <button (click)="button_string=(button_string=='Details')?'Collapse':'Details';show_details($event)">{{button_string}}</button>
+    </div></div>
+    <div class='table' *ngIf="button_string=='Collapse'&&component_state=='loaded'">
+      <div class='table-row'><div class='table-data'>Name</div><div class='table-data'>Language</div><div class='table-data'>Open Issues Count</div></div>
+      <div class='table-row' *ngFor="let item of user_github_list"><div class='table-data'>{{item.name}}</div><div class='table-data'>{{item.language || 'n.a'}}</div><div class='table-data'>{{item.open_issues_count}}</div></div>
+    </div>
+    <div class='table' *ngIf="button_string=='Collapse'&&component_state=='empty'">
+        No Data Found
+    </div>  
+  </div>  

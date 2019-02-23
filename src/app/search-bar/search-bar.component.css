@@ -1,0 +1,37 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+mat-toolbar {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    background-color: #2d72d9; 
+    color: white;
+}
+.mat-toolbar-row {
+    padding: 0px;
+}
+.fill_space {
+    flex: 1 1 auto;
+}
+span {
+    width: 300px;
+}
+input:hover,select:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.form-control
+{
+    border: 1px solid #2d72d9;
+}
+@media (max-width: 599px)
+{
+.mat-toolbar-row {
+    display: block;
+    height: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+input,select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+}
