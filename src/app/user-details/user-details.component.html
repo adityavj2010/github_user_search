@@ -5,7 +5,7 @@
       <div class="username">{{item.login}}</div>
       <div class="profile_url">Profile URL : {{item.html_url}}</div>
       <div class="user_score">Score : {{item.score}}</div>
-      <button (click)="button_string=(button_string=='Details')?'Collapse':'Details';show_details($event)">{{button_string}}</button>
+      <button (click)="button_string=(button_string=='Details')?'Collapse':'Details';show_details()">{{button_string}}</button>
     </div>
   </div>
   <div class='table' *ngIf="button_string=='Collapse'&&component_state=='loaded'">
