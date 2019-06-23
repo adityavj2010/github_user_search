@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row justify-content-center">
+<div class="justify-content-center">
     <div *ngIf='component_state!="started"&&component_state!="error"'
       [ngStyle]="{'opacity': (component_state=='loading')?0.5:1}">
       <div class="total_items">Total : {{total_items}} <a *ngIf='order_asc==true'
