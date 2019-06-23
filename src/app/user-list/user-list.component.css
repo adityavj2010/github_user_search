@@ -25,3 +25,11 @@ a {
     text-align: center;
     color: #9099a6;
 }
+
+@media (max-width: 599px)
+{
+ .container {
+     margin-left: 0px !important;
+     margin-right: 0px !important;
+ }   
+}
