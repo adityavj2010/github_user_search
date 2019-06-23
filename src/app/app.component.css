@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-body {
+/* body {
     padding: 0%;
 }
 
@@ -19,4 +19,11 @@ app-search-bar {
 app-user-list {
     padding-top: 10px;
     display:block;
+} */
+@media (max-width: 599px)
+{
+ .container {
+     margin-left: 0px;
+     margin-right: 0px;
+ }   
 }

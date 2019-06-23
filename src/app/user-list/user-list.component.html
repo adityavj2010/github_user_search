@@ -1,27 +1,36 @@
-<div *ngIf='component_state!="started"&&component_state!="error"' [ngStyle]="{'opacity': (component_state=='loading')?0.5:1}">
-  <div class="total_items">Total : {{total_items}} <a *ngIf='order_asc==true' (click)="order_asc=false;set_data_list()"><img
-        src="./../../assets/baseline-arrow_downward-24px.svg"></a> <a *ngIf='order_asc==false' (click)="order_asc=true;set_data_list()"><img
-        src="./../../assets/baseline-arrow_upward-24px.svg"></a></div>
-  <app-user-details *ngFor='let item of display_list' [item]="item"></app-user-details>
-  <div *ngIf="total_items!=0">
-    <span>
-      <a *ngIf="page_number-1>1" id="1" (click)="page_number=1;set_data_list()">1</a>
-      <a *ngIf="page_number!=3&&page_number-1>1">...</a>
-      <a *ngIf="page_number>1" id="{{page_number-1}}" (click)="page_number=page_number-1;set_data_list()">{{page_number-1}}</a>
-      <a style="color: red;">{{page_number}}</a>
-      <a *ngIf="page_number<total_pages" id="{{page_number+1}}" (click)="page_number=page_number+1;set_data_list()">{{page_number+1}}</a>
-      <a *ngIf="page_number+1<total_pages&&page_number!=total_pages-2">...</a>
-      <a *ngIf="page_number+1<total_pages" id="{{total_pages}}" (click)="page_number=total_pages;set_data_list()">{{total_pages}}</a>
-    </span>
-  </div>
-</div>
+<div class="container">
+<div class="row justify-content-center">
+    <div *ngIf='component_state!="started"&&component_state!="error"'
+      [ngStyle]="{'opacity': (component_state=='loading')?0.5:1}">
+      <div class="total_items">Total : {{total_items}} <a *ngIf='order_asc==true'
+          (click)="order_asc=false;set_data_list()"><img src="./../../assets/baseline-arrow_downward-24px.svg"></a> <a
+          *ngIf='order_asc==false' (click)="order_asc=true;set_data_list()"><img
+            src="./../../assets/baseline-arrow_upward-24px.svg"></a></div>
+      <app-user-details *ngFor='let item of display_list' [item]="item"></app-user-details>
+      <div *ngIf="total_items!=0">
+        <span>
+          <a *ngIf="page_number-1>1" id="1" (click)="page_number=1;set_data_list()">1</a>
+          <a *ngIf="page_number!=3&&page_number-1>1">...</a>
+          <a *ngIf="page_number>1" id="{{page_number-1}}"
+            (click)="page_number=page_number-1;set_data_list()">{{page_number-1}}</a>
+          <a style="color: red;">{{page_number}}</a>
+          <a *ngIf="page_number<total_pages" id="{{page_number+1}}"
+            (click)="page_number=page_number+1;set_data_list()">{{page_number+1}}</a>
+          <a *ngIf="page_number+1<total_pages&&page_number!=total_pages-2">...</a>
+          <a *ngIf="page_number+1<total_pages" id="{{total_pages}}"
+            (click)="page_number=total_pages;set_data_list()">{{total_pages}}</a>
+        </span>
+      </div>
+    </div>
 
-<div *ngIf='component_state=="started"' class='started'>
-  <h3>Enter username to search</h3>
-</div>
-<div *ngIf='component_state=="empty"' class='started'>
-  <h3>No Results</h3>
-</div>
-<div *ngIf='component_state=="error"' class='started'>
-  <h3>Error {{error_message}}</h3>
+    <div *ngIf='component_state=="started"' class='started'>
+      <h3>Enter username to search</h3>
+    </div>
+    <div *ngIf='component_state=="empty"' class='started'>
+      <h3>No Results</h3>
+    </div>
+    <div *ngIf='component_state=="error"' class='started'>
+      <h3>Error {{error_message}}</h3>
+    </div>
+  </div>
 </div>

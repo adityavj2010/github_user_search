@@ -17,6 +17,8 @@ a {
     margin: 3px;
 }
 .total_items {
+    margin-top:10px;
+    margin-bottom: 10px;
     font-weight:600;
 }
 .started {
